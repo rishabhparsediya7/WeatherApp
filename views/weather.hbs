@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+  </head>
+  <body style="background: #171819;background-image:url('images/world-maps.png');">
+    
+    <div class="search-bar">
+      <form class="form-group"action="/search" method="POST">
+        <div class="searchwithbutton">
+          <div class="flexmode">
+            <input type="text" placeholder="Search" class="form-control search" name="search">
+            <button class="fa fa-search btn" type="submit" aria-hidden="true"></button>
+          </div>
+          <button type="button" class="btn btn-sm btn-location">Get location</button>
+        </div>
+      </form>
+    </div>
+    <div class="header">
+        {{cityname}}
+    </div>
+    <div class="weather-section">
+      <div class="row">
+        <div class="col">
+          <div class="box1">
+            <div class="city">
+              {{cityname}}
+            </div>
+            <div class="image">
+              <img src={{wc}} alt="">
+            </div>
+            <div class="temperature">
+             <div style="font-size: 20px;"> {{temp}}°C </div> <div>{{weathercondition}}</div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="condition">
+      <div class="precipitation">
+        <div class="head">
+          Overcast
+        </div>
+        <div class="details" style="text-transform:capitalize; display:flex;justify-content:center;">
+          {{overcast}}
+        </div>
+      </div>
+      <div class="wind">
+         <div class="head">
+          Wind
+        </div>
+        <div class="details">
+          {{wind}} M/sec
+        </div>
+      </div>
+      <div class="humid">
+         <div class="head">
+         Humidity
+        </div>
+        <div class="details">
+         {{humidity}} %
+        </div>
+      </div>
+      <div class="pressure">
+         <div class="head">
+          Pressure
+        </div>
+        <div class="details">
+          {{pressure}} Pa
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
