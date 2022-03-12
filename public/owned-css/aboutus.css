@@ -1,0 +1,45 @@
+.ywc-credit{
+    font-size: 20px;
+    font-weight: bold;
+    color: #252B33;
+    text-align: center;
+}
+.ywc-heading{
+    font-size: 70px;
+    font-weight: bold;
+    color: #252B33;
+    text-align: center;
+    line-height: 1;
+    padding: 0px 20px;
+}
+.ywc-caption{
+    font-size: 20px;
+    font-weight: bold;
+    color: #252B33;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.aboutus-image img{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+.activity-heading{
+    font-size: 40px;
+    font-weight: bold;
+    color: #252B33;
+    letter-spacing: 0.5px;
+}
+.activities{
+
+}
+.activities ol{
+    padding-left: 20px;
+    list-style-type:circle;
+    opacity: 1;
+}
+.orderlist{
+    padding: 10px 20px;
+    margin: 0px 40px;
+}

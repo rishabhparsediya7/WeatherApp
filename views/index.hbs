@@ -1,128 +1,313 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <title>Weather App</title>
-  </head>
-  <body style="background: #171819;background-image:url('images/world-maps.png');">
-    <div class="header">
-        Weather App
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="owned-css/style.css">
+  <link rel="stylesheet" href="owned-css/responsive.css">
+  <link rel="stylesheet" href="owned-css/post.css">
+
+  <title>Yes We Can Club</title>
+</head>
+<style>
+  .subheading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 50%);
+    font-size: 30px;
+    font-weight: bold;
+    background: aliceblue;
+    opacity: 1;
+    padding: 1% 5%;
+    border-radius: 18px;
+    color: #555e68;
+    margin-top: 7%;
+  }
+
+  .card_btn a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .card_title {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+</style>
+
+<body>
+
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
     </div>
-    <div class="search-bar">
-      <form class="form-group"action="/search" method="POST">
-        <div class="searchwithbutton">
-          <div class="flexmode">
-            <input type="text" placeholder="Search" class="form-control search" name="search">
-            <button class="fa fa-search btn" type="submit" aria-hidden="true"></button>
+    <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
+
+
+  <div class="site-navbar-wrap">
+    <div class="site-navbar-top">
+      <div class="container py-3">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <div class="d-flex mr-auto">
+              <a href="#" class="d-flex align-items-center mr-4">
+                <span class="icon-envelope mr-2"></span>
+                <span class="d-none d-md-inline-block">ips.ywc@gmail.com</span>
+              </a>
+              <a href="#" class="d-flex align-items-center mr-auto">
+                <span class="icon-phone mr-2"></span>
+                <span class="d-none d-md-inline-block">+1 234 4567 8910</span>
+              </a>
+            </div>
           </div>
-          
-        </div>
-      </form>
-      <form action="/getlocation" method="POST">
-            <button type="submit" class="btn btn-sm btn-location">Get location</button>
-      </form>
-    </div>
-    <div class="weather-section">
-      <div class="row">
-        <div class="col">
-          <div class="box1">
-            <div class="city">
-              {{weather1.data.name}}, {{weather1.data.sys.country}}
+          <div class="col-6 text-right">
+            <div class="mr-auto">
+              <a href="#" class="p-2 pl-0"><span class="icon-twitter"></span></a>
+              <a href="https://www.facebook.com/profile.php?id=100078447785189" class="p-2 pl-0"><span
+                  class="icon-facebook"></span></a>
+              <a href="https://www.linkedin.com/in/yes-we-can-ips-6867a7231/" class="p-2 pl-0"><span
+                  class="icon-linkedin"></span></a>
+              <a href="#" class="p-2 pl-0"><span class="icon-instagram"></span></a>
             </div>
-            <div class="image">
-              <img src={{wc1}} alt="">
-            </div>
-            <div class="temperature">
-              {{temp1}}°C <br> {{c1}}
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="box2">
-            <div class="city">
-              {{weather2.data.name}}, {{weather2.data.sys.country}}
-            </div>
-            <div class="image">
-              <img src={{wc2}} alt="">
-            </div>
-            <div class="temperature">
-              {{temp2}}° C <br> {{c2}}
-            </div>
+
           </div>
         </div>
       </div>
     </div>
-    <div class="condition">
-      <div class="precipitation">
-        <div class="head">
-          Overcast
-        </div>
-        <div class="details">
-          %
-        </div>
-      </div>
-      <div class="wind">
-         <div class="head">
-          Wind
-        </div>
-        <div class="details">
-          M/sec
-        </div>
-      </div>
-      <div class="humid">
-         <div class="head">
-          Humidity
-        </div>
-        <div class="details">
-          %
-        </div>
-      </div>
-      <div class="pressure">
-         <div class="head">
-          Pressure
-        </div>
-        <div class="details">
-          Pa
+
+    <div class="site-navbar site-navbar-target js-sticky-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <h1 class="my-0 site-logo"><a href="/">YES WE CAN</a></h1>
+          </div>
+          <div class="col-10">
+            <nav class="site-navigation text-right" role="navigation">
+              <div class="container">
+                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#"
+                    class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+
+                <ul class="site-menu main-menu js-clone-nav d-none d-lg-block">
+                  <li class="active"><a href="/index" class="nav-link">Home</a></li>
+                  <li class="has-children">
+                    <a href="/team" class="nav-link">Our Team</a>
+                    <ul class="dropdown arrow-top">
+                      <li><a href="#" class="nav-link">Team</a></li>
+                      <li><a href="#" class="nav-link">Pricing</a></li>
+                      <li><a href="#" class="nav-link">FAQ</a></li>
+                      <li class="has-children">
+                        <a href="#">More Links</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Menu One</a></li>
+                          <li><a href="#">Menu Two</a></li>
+                          <li><a href="#">Menu Three</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="/about" class="nav-link">About</a></li>
+                  <li><a href="/events" class="nav-link">Events</a></li>
+                  <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                  <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+
+
+  <div class="hero" style="background-image: url('images/hero_1.jpg');">
+    <div class="heading centered">
+      <span> YES WE CAN</span>
+      <div class="subheading">
+        TRAINING AND PLACEMENT CELL CLUB
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="posts-section">
+    <div class="main">
+      <ul class="cards">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="https://picsum.photos/seed/register/500/300"></div>
+            <div class="card_content">
+              <h2 class="card_title">Registration</h2>
+              <p class="card_text">Register here to be a member of Yes We Can Club, Training and Placement Cell</p>
+              <button class="btn card_btn"><a href="/register"> Register</a></button>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="https://picsum.photos/seed/member/500/300"></div>
+            <div class="card_content">
+              <h2 class="card_title">YWC Member</h2>
+              <p class="card_text">All the members of Yes We Can Club, Training and Placement Cell</p>
+              <button class="btn card_btn"><a
+                  href="https://docs.google.com/spreadsheets/d/1ZCsUJcRliYnwjLmJjR3oix1zVz5JfHLhcAKrHYxmxUQ/edit?usp=sharing"
+                  target="_blank">Get Access</a></button>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="https://picsum.photos/seed/superhero/500/300"></div>
+            <div class="card_content">
+              <h2 class="card_title">Super Hero</h2>
+              <p class="card_text">Super hero of the Month, of Yes We Can Club, Training and Placement Cell</p>
+              <button class="btn card_btn"><a href="/superhero"> Find out who.</a></button>
+            </div>
+          </div>
+        </li>
+        {{!-- <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
+            <div class="card_content">
+              <h2 class="card_title">Card Grid Layout</h2>
+              <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+              <button class="btn card_btn">Read More</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
+            <div class="card_content">
+              <h2 class="card_title">Card Grid Layout</h2>
+              <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+              <button class="btn card_btn">Read More</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
+            <div class="card_content">
+              <h2 class="card_title">Card Grid Layout</h2>
+              <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+              <button class="btn card_btn">Read More</button>
+            </div>
+          </div>
+        </li> --}}
+      </ul>
+    </div>
+  </div>
+
+  <!-- Remove the container if you want to extend the Footer to full width. -->
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #3f51b5">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: Links -->
+        <section class="mt-5">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="/about" class="text-white">About us</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="/events" class="text-white">Events</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="/team" class="text-white">Our Team</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="/superhero" class="text-white">SuperHero</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#" class="text-white">Contact</a>
+              </h6>
+            </div>
+           
+          </div>
+         
+        </section>
+        <hr class="my-5" />
+        <section class="mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                YWC Club is founded by students of IPS College and holds a vision to unleash the potential of today's youth,
+            gain overall Skill Development of students as well as helping them to prepare for their Placements.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Yes We Can Club, Training and Placement Cell</a>
+      </div>
+    </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

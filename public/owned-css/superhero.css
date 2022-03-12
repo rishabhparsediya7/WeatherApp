@@ -1,0 +1,24 @@
+.hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero-caption{
+   text-align: justify;
+}
+.hero-name{
+    font-size:25px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.hero-image img{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.certificate img{
+    border-radius: 8px;
+}
